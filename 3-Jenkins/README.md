@@ -26,7 +26,7 @@ docker compose up -d
 ```bash
 docker logs jenkins
 ```
-Look for the password in the output between the asterisks. Or
+Look for the password in the output between the asterisks. Or:
 ```bash
 docker exec jenkins cat /var/jenkins_home/secrets/initialAdminPassword
 ```
@@ -114,7 +114,7 @@ docker exec jenkins cat /var/jenkins_home/secrets/initialAdminPassword
 
 ![Screenshot: Build in progress](./screenshots/build_history.png)
 
-3. Click on the build number (e.g., #1) to view build details
+3. Click on the build number (e.g., #3) to view build details
 
 ![Screenshot: Build details page](./screenshots/build_details_page.png)
 
@@ -146,6 +146,10 @@ After a successful build, you should see:
 ### Issue: "command not found: docker-compose"
 
 **Solution:** Use `docker compose` (with space) instead of `docker-compose` (with hyphen). Modern Docker Desktop uses Docker Compose V2.
+
+### Issue: "ERROR: Couldn't find any revision to build. Verify the repository and branch configuration for this job."
+
+**Solution:** Specify a branch other than `main` in the Source Code Management step.
 
 ### Issue: "Cannot run program 'mvn'"
 
