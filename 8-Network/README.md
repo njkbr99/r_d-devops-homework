@@ -24,7 +24,7 @@ Both virtual machines were configured to use the same **Host-only network adapte
 - No external internet interference
 - Predictable and isolated network behavior
 
-![Network settings on both VMs](./screenshots/network_setting_on_both_vms.png)
+![Network settings on both VMs](./screenshots/tcp_udp_firewall/network_setting_on_both_vms.png)
 
 ---
 
