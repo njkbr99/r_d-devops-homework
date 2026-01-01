@@ -38,7 +38,7 @@ The hostname was changed **only on the cloned VM (VM2)** to clearly distinguish 
 
 This avoids ambiguity when demonstrating client/server roles.
 
-![Hostname setting on VM2](./screenshots/hostname_setting_vm2.png)
+![Hostname setting on VM2](./screenshots/tcp_udp_firewall/hostname_setting_vm2.png)
 
 ---
 
@@ -55,7 +55,7 @@ The `-c 3` option was used to:
 - avoid infinite execution
 - produce clean, deterministic output for screenshots
 
-![Ping connection between VMs](./screenshots/ping_connection_between_vms.png)
+![Ping connection between VMs](./screenshots/tcp_udp_firewall/ping_connection_between_vms.png)
 
 ---
 
@@ -76,7 +76,7 @@ Messages were successfully exchanged in both directions, demonstrating:
 - Full-duplex communication
 - Reliable delivery
 
-![TCP connection tested](./screenshots/tcp_connection_tested.png)
+![TCP connection tested](./screenshots/tcp_udp_firewall/tcp_connection_tested.png)
 
 ### TCP Connection Teardown Observation
 
@@ -111,7 +111,7 @@ Important observation:
 
 By default, the UDP listener may stop after receiving the first datagram.
 
-![UDP silently stopped listening after first datagram](./screenshots/udp_silently_stopped_listening_after_first_datagram.png)
+![UDP silently stopped listening after first datagram](./screenshots/tcp_udp_firewall/udp_silently_stopped_listening_after_first_datagram.png)
 
 To keep the listener alive, the `-k` option was used:
 
@@ -121,7 +121,7 @@ nc -u -l -k -p 5001
 
 This allowed multiple UDP datagrams to be received over time.
 
-![UDP kept listening with -k](./screenshots/udp_kept_listening_with_-k.png)
+![UDP kept listening with -k](./screenshots/tcp_udp_firewall/udp_kept_listening_with_-k.png)
 
 ### Sender Behavior When Listener Stops
 
