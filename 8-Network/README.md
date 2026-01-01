@@ -107,6 +107,10 @@ Important observation:
 - UDP does not automatically provide two-way communication
 - This behavior is correct and expected.
 
+> [!IMPORTANT]
+> P.S. this comment is added after submition of the homework.
+> As it is visible on the screenshot below, the sender received a response from the receiver, which is not expected.
+
 ### Listener Lifetime in UDP
 
 By default, the UDP listener may stop after receiving the first datagram.
@@ -145,10 +149,19 @@ sudo ufw deny 5000/tcp
 - The client hung without an error
 - Messages were not delivered
 
+> [!IMPORTANT]
+> P.S. this comment is added after submition of the homework.
+> It did not hung without an error, it was a timeout that resulted in me thinking it is frozen.
+> But on a screenshot below, it is visible that there is a loud failure, I just did not understand it at that point of time.
+
 This happens because:
 - `ufw deny` drops packets silently
 - TCP handshake never completes
 - The client waits until timeout
+
+> [!IMPORTANT]
+> P.S. this comment is added after submition of the homework.
+> The line below is incorrect. As it stated above, the client waits until timeout.
 
 This is still a TCP failure, just not a loud one.
 
@@ -157,6 +170,12 @@ This is still a TCP failure, just not a loud one.
 ### DROP vs REJECT (Cleaner Failure)
 
 To demonstrate a loud failure, the rule was changed to reject:
+
+> [!IMPORTANT]
+> P.S. this comment is added after submition of the homework.
+> It is not a loud failer, it is an immediate rejection, because the firewall policy is different and sends the response immediately.
+> But the behaviour of the client is actually closer to a silent failure. Probably there is a way to catch it. I will investigate it later.
+
 
 ```bash
 sudo ufw reject 5000/tcp
@@ -185,6 +204,12 @@ When VM2 sent UDP packets:
 - The sender exited normally
 - No error was shown
 - The receiver received nothing
+
+> [!IMPORTANT]
+> P.S. this comment is added after submition of the homework.
+> Now after I figured my mistake in how TCP ended up in a timeout, perhaps UDP will behave the same way.
+> But I did not wait long enough during the test, so not 100% sure. Will investigate later.
+
 
 This demonstrates that:
 - UDP has no handshake
