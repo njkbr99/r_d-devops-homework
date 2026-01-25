@@ -1,0 +1,19 @@
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: schooldb-mysql
+    restart: unless-stopped
+    command: ["mysqld", "--character-set-server=utf8mb4", "--collation-server=utf8mb4_0900_ai_ci", "--init-connect=SET NAMES utf8mb4"]
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: SchoolDB
+      MYSQL_USER: school
+      MYSQL_PASSWORD: schoolpass
+    ports:
+      - "3306:3306"
+    volumes:
+      - r_d-sql-mysql_data:/var/lib/mysql
+      - ./init:/docker-entrypoint-initdb.d
+
+volumes:
+  r_d-sql-mysql_data:

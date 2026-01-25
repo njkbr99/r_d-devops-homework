@@ -1,0 +1,4 @@
+#,institution_id,institution_name,institution_type,address,children_count
+1,2,Київська гімназія №101,School,"Київ, вул. Лесі Українки, 7",50
+2,1,Ліцей «Дніпровський» №23,School,"Дніпро, вул. Франка, 6",50
+3,3,ДНЗ «Сонечко»,Kindergarten,"Львів, просп. Перемоги, 8",30

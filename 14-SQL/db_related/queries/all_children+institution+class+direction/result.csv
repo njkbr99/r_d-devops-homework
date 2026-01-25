@@ -1,0 +1,131 @@
+#,child_id,first_name,last_name,institution_name,institution_type,class_name,direction
+1,107,Марія,Бондаренко,ДНЗ «Сонечко»,Kindergarten,Група 1,Language Studies
+2,103,Михайло,Захарченко,ДНЗ «Сонечко»,Kindergarten,Група 1,Language Studies
+3,113,Михайло,Захарченко,ДНЗ «Сонечко»,Kindergarten,Група 1,Language Studies
+4,114,Кирило,Коваль,ДНЗ «Сонечко»,Kindergarten,Група 1,Language Studies
+5,104,Кирило,Коваль,ДНЗ «Сонечко»,Kindergarten,Група 1,Language Studies
+6,102,Артем,Петренко,ДНЗ «Сонечко»,Kindergarten,Група 1,Language Studies
+7,112,Артем,Петренко,ДНЗ «Сонечко»,Kindergarten,Група 1,Language Studies
+8,108,Дарина,Поліщук,ДНЗ «Сонечко»,Kindergarten,Група 1,Language Studies
+9,115,Олена,Романенко,ДНЗ «Сонечко»,Kindergarten,Група 1,Language Studies
+10,105,Олена,Романенко,ДНЗ «Сонечко»,Kindergarten,Група 1,Language Studies
+11,109,Катерина,Савченко,ДНЗ «Сонечко»,Kindergarten,Група 1,Language Studies
+12,106,Наталія,Сидоренко,ДНЗ «Сонечко»,Kindergarten,Група 1,Language Studies
+13,111,Дмитро,Ткаченко,ДНЗ «Сонечко»,Kindergarten,Група 1,Language Studies
+14,101,Дмитро,Ткаченко,ДНЗ «Сонечко»,Kindergarten,Група 1,Language Studies
+15,110,Андрій,Шевченко,ДНЗ «Сонечко»,Kindergarten,Група 1,Language Studies
+16,124,Марія,Бондаренко,ДНЗ «Сонечко»,Kindergarten,Група 2,Mathematics
+17,130,Михайло,Захарченко,ДНЗ «Сонечко»,Kindergarten,Група 2,Mathematics
+18,120,Михайло,Захарченко,ДНЗ «Сонечко»,Kindergarten,Група 2,Mathematics
+19,121,Кирило,Коваль,ДНЗ «Сонечко»,Kindergarten,Група 2,Mathematics
+20,119,Артем,Петренко,ДНЗ «Сонечко»,Kindergarten,Група 2,Mathematics
+21,129,Артем,Петренко,ДНЗ «Сонечко»,Kindergarten,Група 2,Mathematics
+22,125,Дарина,Поліщук,ДНЗ «Сонечко»,Kindergarten,Група 2,Mathematics
+23,122,Олена,Романенко,ДНЗ «Сонечко»,Kindergarten,Група 2,Mathematics
+24,116,Катерина,Савченко,ДНЗ «Сонечко»,Kindergarten,Група 2,Mathematics
+25,126,Катерина,Савченко,ДНЗ «Сонечко»,Kindergarten,Група 2,Mathematics
+26,123,Наталія,Сидоренко,ДНЗ «Сонечко»,Kindergarten,Група 2,Mathematics
+27,118,Дмитро,Ткаченко,ДНЗ «Сонечко»,Kindergarten,Група 2,Mathematics
+28,128,Дмитро,Ткаченко,ДНЗ «Сонечко»,Kindergarten,Група 2,Mathematics
+29,117,Андрій,Шевченко,ДНЗ «Сонечко»,Kindergarten,Група 2,Mathematics
+30,127,Андрій,Шевченко,ДНЗ «Сонечко»,Kindergarten,Група 2,Mathematics
+31,53,Михайло,Захарченко,Київська гімназія №101,School,1-А,Mathematics
+32,54,Кирило,Коваль,Київська гімназія №101,School,1-А,Mathematics
+33,52,Артем,Петренко,Київська гімназія №101,School,1-А,Mathematics
+34,55,Олена,Романенко,Київська гімназія №101,School,1-А,Mathematics
+35,51,Дмитро,Ткаченко,Київська гімназія №101,School,1-А,Mathematics
+36,100,Артем,Петренко,Київська гімназія №101,School,10-А,Mathematics
+37,96,Дарина,Поліщук,Київська гімназія №101,School,10-А,Mathematics
+38,97,Катерина,Савченко,Київська гімназія №101,School,10-А,Mathematics
+39,99,Дмитро,Ткаченко,Київська гімназія №101,School,10-А,Mathematics
+40,98,Андрій,Шевченко,Київська гімназія №101,School,10-А,Mathematics
+41,59,Марія,Бондаренко,Київська гімназія №101,School,2-А,Biology and Chemistry
+42,56,Кирило,Коваль,Київська гімназія №101,School,2-А,Biology and Chemistry
+43,60,Дарина,Поліщук,Київська гімназія №101,School,2-А,Biology and Chemistry
+44,57,Олена,Романенко,Київська гімназія №101,School,2-А,Biology and Chemistry
+45,58,Наталія,Сидоренко,Київська гімназія №101,School,2-А,Biology and Chemistry
+46,61,Марія,Бондаренко,Київська гімназія №101,School,3-А,Language Studies
+47,62,Дарина,Поліщук,Київська гімназія №101,School,3-А,Language Studies
+48,63,Катерина,Савченко,Київська гімназія №101,School,3-А,Language Studies
+49,65,Дмитро,Ткаченко,Київська гімназія №101,School,3-А,Language Studies
+50,64,Андрій,Шевченко,Київська гімназія №101,School,3-А,Language Studies
+51,69,Михайло,Захарченко,Київська гімназія №101,School,4-А,Mathematics
+52,70,Кирило,Коваль,Київська гімназія №101,School,4-А,Mathematics
+53,68,Артем,Петренко,Київська гімназія №101,School,4-А,Mathematics
+54,67,Дмитро,Ткаченко,Київська гімназія №101,School,4-А,Mathematics
+55,66,Андрій,Шевченко,Київська гімназія №101,School,4-А,Mathematics
+56,75,Марія,Бондаренко,Київська гімназія №101,School,5-А,Biology and Chemistry
+57,71,Михайло,Захарченко,Київська гімназія №101,School,5-А,Biology and Chemistry
+58,72,Кирило,Коваль,Київська гімназія №101,School,5-А,Biology and Chemistry
+59,73,Олена,Романенко,Київська гімназія №101,School,5-А,Biology and Chemistry
+60,74,Наталія,Сидоренко,Київська гімназія №101,School,5-А,Biology and Chemistry
+61,77,Марія,Бондаренко,Київська гімназія №101,School,6-А,Language Studies
+62,78,Дарина,Поліщук,Київська гімназія №101,School,6-А,Language Studies
+63,79,Катерина,Савченко,Київська гімназія №101,School,6-А,Language Studies
+64,76,Наталія,Сидоренко,Київська гімназія №101,School,6-А,Language Studies
+65,80,Андрій,Шевченко,Київська гімназія №101,School,6-А,Language Studies
+66,85,Михайло,Захарченко,Київська гімназія №101,School,7-А,Mathematics
+67,84,Артем,Петренко,Київська гімназія №101,School,7-А,Mathematics
+68,81,Катерина,Савченко,Київська гімназія №101,School,7-А,Mathematics
+69,83,Дмитро,Ткаченко,Київська гімназія №101,School,7-А,Mathematics
+70,82,Андрій,Шевченко,Київська гімназія №101,School,7-А,Mathematics
+71,87,Михайло,Захарченко,Київська гімназія №101,School,8-А,Biology and Chemistry
+72,88,Кирило,Коваль,Київська гімназія №101,School,8-А,Biology and Chemistry
+73,86,Артем,Петренко,Київська гімназія №101,School,8-А,Biology and Chemistry
+74,89,Олена,Романенко,Київська гімназія №101,School,8-А,Biology and Chemistry
+75,90,Наталія,Сидоренко,Київська гімназія №101,School,8-А,Biology and Chemistry
+76,93,Марія,Бондаренко,Київська гімназія №101,School,9-А,Language Studies
+77,94,Дарина,Поліщук,Київська гімназія №101,School,9-А,Language Studies
+78,91,Олена,Романенко,Київська гімназія №101,School,9-А,Language Studies
+79,95,Катерина,Савченко,Київська гімназія №101,School,9-А,Language Studies
+80,92,Наталія,Сидоренко,Київська гімназія №101,School,9-А,Language Studies
+81,3,Михайло,Захарченко,Ліцей «Дніпровський» №23,School,1-А,Mathematics
+82,4,Кирило,Коваль,Ліцей «Дніпровський» №23,School,1-А,Mathematics
+83,2,Артем,Петренко,Ліцей «Дніпровський» №23,School,1-А,Mathematics
+84,5,Олена,Романенко,Ліцей «Дніпровський» №23,School,1-А,Mathematics
+85,1,Дмитро,Ткаченко,Ліцей «Дніпровський» №23,School,1-А,Mathematics
+86,50,Артем,Петренко,Ліцей «Дніпровський» №23,School,10-А,Mathematics
+87,46,Дарина,Поліщук,Ліцей «Дніпровський» №23,School,10-А,Mathematics
+88,47,Катерина,Савченко,Ліцей «Дніпровський» №23,School,10-А,Mathematics
+89,49,Дмитро,Ткаченко,Ліцей «Дніпровський» №23,School,10-А,Mathematics
+90,48,Андрій,Шевченко,Ліцей «Дніпровський» №23,School,10-А,Mathematics
+91,9,Марія,Бондаренко,Ліцей «Дніпровський» №23,School,2-А,Biology and Chemistry
+92,6,Кирило,Коваль,Ліцей «Дніпровський» №23,School,2-А,Biology and Chemistry
+93,10,Дарина,Поліщук,Ліцей «Дніпровський» №23,School,2-А,Biology and Chemistry
+94,7,Олена,Романенко,Ліцей «Дніпровський» №23,School,2-А,Biology and Chemistry
+95,8,Наталія,Сидоренко,Ліцей «Дніпровський» №23,School,2-А,Biology and Chemistry
+96,11,Марія,Бондаренко,Ліцей «Дніпровський» №23,School,3-А,Language Studies
+97,12,Дарина,Поліщук,Ліцей «Дніпровський» №23,School,3-А,Language Studies
+98,13,Катерина,Савченко,Ліцей «Дніпровський» №23,School,3-А,Language Studies
+99,15,Дмитро,Ткаченко,Ліцей «Дніпровський» №23,School,3-А,Language Studies
+100,14,Андрій,Шевченко,Ліцей «Дніпровський» №23,School,3-А,Language Studies
+101,19,Михайло,Захарченко,Ліцей «Дніпровський» №23,School,4-А,Mathematics
+102,20,Кирило,Коваль,Ліцей «Дніпровський» №23,School,4-А,Mathematics
+103,18,Артем,Петренко,Ліцей «Дніпровський» №23,School,4-А,Mathematics
+104,17,Дмитро,Ткаченко,Ліцей «Дніпровський» №23,School,4-А,Mathematics
+105,16,Андрій,Шевченко,Ліцей «Дніпровський» №23,School,4-А,Mathematics
+106,25,Марія,Бондаренко,Ліцей «Дніпровський» №23,School,5-А,Biology and Chemistry
+107,21,Михайло,Захарченко,Ліцей «Дніпровський» №23,School,5-А,Biology and Chemistry
+108,22,Кирило,Коваль,Ліцей «Дніпровський» №23,School,5-А,Biology and Chemistry
+109,23,Олена,Романенко,Ліцей «Дніпровський» №23,School,5-А,Biology and Chemistry
+110,24,Наталія,Сидоренко,Ліцей «Дніпровський» №23,School,5-А,Biology and Chemistry
+111,27,Марія,Бондаренко,Ліцей «Дніпровський» №23,School,6-А,Language Studies
+112,28,Дарина,Поліщук,Ліцей «Дніпровський» №23,School,6-А,Language Studies
+113,29,Катерина,Савченко,Ліцей «Дніпровський» №23,School,6-А,Language Studies
+114,26,Наталія,Сидоренко,Ліцей «Дніпровський» №23,School,6-А,Language Studies
+115,30,Андрій,Шевченко,Ліцей «Дніпровський» №23,School,6-А,Language Studies
+116,35,Михайло,Захарченко,Ліцей «Дніпровський» №23,School,7-А,Mathematics
+117,34,Артем,Петренко,Ліцей «Дніпровський» №23,School,7-А,Mathematics
+118,31,Катерина,Савченко,Ліцей «Дніпровський» №23,School,7-А,Mathematics
+119,33,Дмитро,Ткаченко,Ліцей «Дніпровський» №23,School,7-А,Mathematics
+120,32,Андрій,Шевченко,Ліцей «Дніпровський» №23,School,7-А,Mathematics
+121,37,Михайло,Захарченко,Ліцей «Дніпровський» №23,School,8-А,Biology and Chemistry
+122,38,Кирило,Коваль,Ліцей «Дніпровський» №23,School,8-А,Biology and Chemistry
+123,36,Артем,Петренко,Ліцей «Дніпровський» №23,School,8-А,Biology and Chemistry
+124,39,Олена,Романенко,Ліцей «Дніпровський» №23,School,8-А,Biology and Chemistry
+125,40,Наталія,Сидоренко,Ліцей «Дніпровський» №23,School,8-А,Biology and Chemistry
+126,43,Марія,Бондаренко,Ліцей «Дніпровський» №23,School,9-А,Language Studies
+127,44,Дарина,Поліщук,Ліцей «Дніпровський» №23,School,9-А,Language Studies
+128,41,Олена,Романенко,Ліцей «Дніпровський» №23,School,9-А,Language Studies
+129,45,Катерина,Савченко,Ліцей «Дніпровський» №23,School,9-А,Language Studies
+130,42,Наталія,Сидоренко,Ліцей «Дніпровський» №23,School,9-А,Language Studies
