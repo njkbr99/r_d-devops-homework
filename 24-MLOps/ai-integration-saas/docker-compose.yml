@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  saas-llm:
+    build: .
+    ports:
+      - "8030:8030"
+    env_file:
+      - .env
+    restart: unless-stopped
