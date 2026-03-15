@@ -1,0 +1,7 @@
+---
+- name: Apply baseline configuration
+  hosts: webservers
+  become: true
+  roles:
+    - baseline
+    - firewall

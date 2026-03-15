@@ -1,0 +1,8 @@
+---
+- name: Apply all roles to webservers
+  hosts: aws_ec2
+  become: true
+  roles:
+    - baseline
+    - firewall
+    - nginx

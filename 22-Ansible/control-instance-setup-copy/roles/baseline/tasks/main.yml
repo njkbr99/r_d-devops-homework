@@ -1,0 +1,14 @@
+---
+- name: Install baseline packages
+  ansible.builtin.package:
+    name:
+      - vim
+      - git
+      - mc
+    state: present
+
+- name: Set up authorized SSH key
+  ansible.posix.authorized_key:
+    user: ec2-user
+    state: present
+    key: "{{ lookup('file', '~/.ssh/anat-ansible-key.pem.pub') }}"
