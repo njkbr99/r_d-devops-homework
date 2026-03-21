@@ -498,8 +498,7 @@ docker-compose restart
 
 ### After test deployment — new version live
 
-<!-- TODO: Add GIF of app after CI/CD deployment showing updated version is running -->
-
+![App demo after test deployment](screenshots/16_web_app_after_deployment.png)
 
 This ensures that DB is setup correctly and the app is running.
 
