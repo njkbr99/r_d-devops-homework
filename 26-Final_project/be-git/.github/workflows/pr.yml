@@ -4,6 +4,9 @@ on:
   pull_request:
     branches:
       - r_d_final_project_prod
+    paths-ignore:
+      - '**.md'
+      - 'mobile/**'
 
 env:
   AWS_REGION: eu-north-1
