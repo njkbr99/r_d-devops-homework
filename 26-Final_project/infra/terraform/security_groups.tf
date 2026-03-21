@@ -48,6 +48,16 @@ resource "aws_security_group_rule" "app_api" {
   source_security_group_id = aws_security_group.alb.id
 }
 
+resource "aws_security_group_rule" "app_metrics" {
+  type                     = "ingress"
+  description              = "Prometheus metrics scrape from monitoring"
+  from_port                = 3000
+  to_port                  = 3000
+  protocol                 = "tcp"
+  security_group_id        = aws_security_group.app.id
+  source_security_group_id = aws_security_group.monitoring.id
+}
+
 # ALB security group — accepts HTTP from anywhere, forwards to app EC2
 resource "aws_security_group" "alb" {
   name        = "${local.name_prefix}-alb-sg"

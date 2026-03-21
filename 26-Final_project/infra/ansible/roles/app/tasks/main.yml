@@ -39,8 +39,14 @@
     docker pull {{ ecr_image }}:latest
   changed_when: true
 
+- name: Remove existing container if present
+  ansible.builtin.shell: |
+    docker stop trainings-tracker-api || true
+    docker rm trainings-tracker-api || true
+  changed_when: false
+
 - name: Start app with docker compose
   ansible.builtin.shell: |
-    cd {{ app_dir }} && docker compose up -d
+    cd {{ app_dir }} && docker-compose up -d
   become_user: ec2-user
   changed_when: true
