@@ -1,0 +1,23 @@
+---
+- name: Install Docker
+  ansible.builtin.yum:
+    name:
+      - docker
+    state: present
+
+- name: Install Docker Compose plugin
+  ansible.builtin.yum:
+    name: docker-compose-plugin
+    state: present
+
+- name: Start and enable Docker
+  ansible.builtin.service:
+    name: docker
+    state: started
+    enabled: true
+
+- name: Add ec2-user to docker group
+  ansible.builtin.user:
+    name: ec2-user
+    groups: docker
+    append: true

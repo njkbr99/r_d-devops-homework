@@ -1,0 +1,73 @@
+---
+- name: Create promtail user
+  ansible.builtin.user:
+    name: promtail
+    system: true
+    shell: /bin/false
+    groups: docker
+    append: true
+
+- name: Create promtail config directory
+  ansible.builtin.file:
+    path: /etc/promtail
+    state: directory
+    mode: '0755'
+
+- name: Download Promtail
+  ansible.builtin.get_url:
+    url: "https://github.com/grafana/loki/releases/download/v2.9.0/promtail-linux-amd64.zip"
+    dest: /tmp/promtail.zip
+    mode: '0644'
+
+- name: Install unzip
+  ansible.builtin.yum:
+    name: unzip
+    state: present
+
+- name: Extract Promtail
+  ansible.builtin.unarchive:
+    src: /tmp/promtail.zip
+    dest: /tmp
+    remote_src: true
+
+- name: Move Promtail binary
+  ansible.builtin.copy:
+    src: /tmp/promtail-linux-amd64
+    dest: /usr/local/bin/promtail
+    owner: promtail
+    group: promtail
+    mode: '0755'
+    remote_src: true
+
+- name: Deploy Promtail config
+  ansible.builtin.template:
+    src: promtail-config.yml.j2
+    dest: /etc/promtail/config.yml
+    owner: promtail
+    group: promtail
+    mode: '0644'
+  notify: Restart promtail
+
+- name: Create Promtail systemd service
+  ansible.builtin.copy:
+    dest: /etc/systemd/system/promtail.service
+    content: |
+      [Unit]
+      Description=Promtail
+      After=network.target
+
+      [Service]
+      User=promtail
+      ExecStart=/usr/local/bin/promtail -config.file=/etc/promtail/config.yml
+      Restart=always
+
+      [Install]
+      WantedBy=multi-user.target
+    mode: '0644'
+
+- name: Enable and start Promtail
+  ansible.builtin.systemd:
+    name: promtail
+    state: started
+    enabled: true
+    daemon_reload: true

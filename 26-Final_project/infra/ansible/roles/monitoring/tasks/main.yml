@@ -1,0 +1,52 @@
+---
+- name: Install Docker
+  ansible.builtin.apt:
+    name:
+      - docker.io
+      - docker-compose
+    state: present
+    update_cache: true
+
+- name: Start and enable Docker
+  ansible.builtin.service:
+    name: docker
+    state: started
+    enabled: true
+
+- name: Add ubuntu user to docker group
+  ansible.builtin.user:
+    name: ubuntu
+    groups: docker
+    append: true
+
+- name: Create monitoring directory
+  ansible.builtin.file:
+    path: /opt/monitoring/config
+    state: directory
+    mode: '0755'
+
+- name: Deploy Prometheus config
+  ansible.builtin.template:
+    src: prometheus.yml.j2
+    dest: /opt/monitoring/config/prometheus.yml
+    mode: '0644'
+  notify: Restart monitoring stack
+
+- name: Deploy Loki config
+  ansible.builtin.copy:
+    src: loki-config.yml
+    dest: /opt/monitoring/config/loki-config.yml
+    mode: '0644'
+  notify: Restart monitoring stack
+
+- name: Deploy docker-compose for monitoring stack
+  ansible.builtin.template:
+    src: docker-compose.yml.j2
+    dest: /opt/monitoring/docker-compose.yml
+    mode: '0644'
+  notify: Restart monitoring stack
+
+- name: Start monitoring stack
+  ansible.builtin.shell: |
+    cd /opt/monitoring && docker-compose up -d
+  changed_when: true

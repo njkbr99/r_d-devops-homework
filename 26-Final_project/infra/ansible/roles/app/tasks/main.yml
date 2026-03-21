@@ -1,0 +1,46 @@
+---
+- name: Create app directory
+  ansible.builtin.file:
+    path: "{{ app_dir }}"
+    state: directory
+    owner: ec2-user
+    group: ec2-user
+    mode: '0755'
+
+- name: Create uploads volume directory
+  ansible.builtin.file:
+    path: "{{ app_dir }}/uploads"
+    state: directory
+    owner: ec2-user
+    group: ec2-user
+    mode: '0755'
+
+- name: Install AWS CLI (needed for ECR login)
+  ansible.builtin.yum:
+    name: awscli
+    state: present
+
+- name: Authenticate Docker with ECR
+  ansible.builtin.shell: |
+    aws ecr get-login-password --region {{ aws_region }} | \
+    docker login --username AWS --password-stdin {{ ecr_registry }}
+  changed_when: true
+
+- name: Deploy docker-compose file
+  ansible.builtin.template:
+    src: docker-compose.yml.j2
+    dest: "{{ app_dir }}/docker-compose.yml"
+    owner: ec2-user
+    group: ec2-user
+    mode: '0644'
+
+- name: Pull latest image
+  ansible.builtin.shell: |
+    docker pull {{ ecr_image }}:latest
+  changed_when: true
+
+- name: Start app with docker compose
+  ansible.builtin.shell: |
+    cd {{ app_dir }} && docker compose up -d
+  become_user: ec2-user
+  changed_when: true

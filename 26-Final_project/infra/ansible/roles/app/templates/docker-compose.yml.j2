@@ -1,0 +1,17 @@
+services:
+  api:
+    image: {{ ecr_image }}:latest
+    container_name: {{ app_container_name }}
+    restart: unless-stopped
+    ports:
+      - "{{ app_port }}:{{ app_port }}"
+    environment:
+      DB_HOST: "{{ db_host }}"
+      DB_PORT: "{{ db_port }}"
+      DB_USER: "{{ db_user }}"
+      DB_PASSWORD: "{{ vault_db_password }}"
+      DB_NAME: "{{ db_name }}"
+      JWT_SECRET: "{{ vault_jwt_secret }}"
+      API_BASE_URL: "http://{{ ansible_host }}:{{ app_port }}"
+    volumes:
+      - {{ app_dir }}/uploads:/app/uploads

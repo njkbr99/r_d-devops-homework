@@ -1,0 +1,5 @@
+---
+- name: Restart monitoring stack
+  ansible.builtin.shell: |
+    cd /opt/monitoring && docker-compose restart
+  changed_when: true

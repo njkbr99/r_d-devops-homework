@@ -1,0 +1,22 @@
+---
+# AWS
+aws_region: eu-north-1
+ecr_registry: "798974632222.dkr.ecr.eu-north-1.amazonaws.com"
+ecr_image: "798974632222.dkr.ecr.eu-north-1.amazonaws.com/trainings-tracker/backend"
+
+# App
+app_port: 3000
+app_dir: /opt/trainings-tracker
+app_container_name: trainings-tracker-api
+
+# Database
+db_host: "trainings-tracker-mysql.clqyym0s0c7q.eu-north-1.rds.amazonaws.com"
+db_port: 3306
+db_name: trainings_tracker
+db_user: trainings
+
+# Monitoring instance private IP — used in prometheus.yml and promtail config
+monitoring_private_ip: "10.2.2.31"
+
+# App instance private IP — used in prometheus.yml scrape config
+app_private_ip: "10.2.1.231"

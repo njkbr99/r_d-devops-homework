@@ -1,0 +1,15 @@
+---
+- name: Configure app instance
+  hosts: tag_trainings_tracker_app
+  become: true
+  roles:
+    - docker
+    - node_exporter
+    - promtail
+    - app
+
+- name: Configure monitoring instance
+  hosts: tag_trainings_tracker_monitoring
+  become: true
+  roles:
+    - monitoring

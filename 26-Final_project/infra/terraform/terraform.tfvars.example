@@ -1,0 +1,15 @@
+# Copy this file to terraform.tfvars and fill in your values
+# terraform.tfvars is gitignored — never commit it
+
+aws_region    = "eu-north-1"
+project       = "trainings-tracker"
+key_pair_name = "trainings-tracker-key"
+
+# Your public IP — find it at https://whatismyip.com
+# Must include the /32 suffix
+your_ip = "YOUR_IP_HERE/32"
+
+# RDS MySQL credentials
+db_username = "trainings"
+db_password = "CHANGE_ME_STRONG_PASSWORD"
+db_name     = "trainings_tracker"

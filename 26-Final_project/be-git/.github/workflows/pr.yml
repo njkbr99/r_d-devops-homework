@@ -1,0 +1,59 @@
+name: PR checks
+
+on:
+  pull_request:
+    branches:
+      - r_d_final_project_prod
+
+env:
+  AWS_REGION: eu-north-1
+  ECR_REPOSITORY: trainings-tracker/backend
+
+jobs:
+  lint-test-build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: '1.21'
+          cache-dependency-path: backend/go.sum
+
+      - name: Run golangci-lint
+        uses: golangci/golangci-lint-action@v4
+        with:
+          working-directory: backend
+          version: latest
+
+      - name: Run tests
+        working-directory: backend
+        run: go test ./...
+
+      - name: Build binary
+        working-directory: backend
+        run: CGO_ENABLED=0 GOOS=linux go build -o /dev/null .
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ env.AWS_REGION }}
+
+      - name: Login to ECR
+        id: login-ecr
+        uses: aws-actions/amazon-ecr-login@v2
+
+      - name: Build and push Docker image with commit hash
+        env:
+          ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
+        run: |
+          SHORT_SHA=$(echo ${{ github.sha }} | cut -c1-7)
+          docker build ./backend \
+            -t $ECR_REGISTRY/$ECR_REPOSITORY:$SHORT_SHA
+          docker push $ECR_REGISTRY/$ECR_REPOSITORY:$SHORT_SHA
+          echo "Image pushed: $ECR_REGISTRY/$ECR_REPOSITORY:$SHORT_SHA"
